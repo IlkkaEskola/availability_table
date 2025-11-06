@@ -1,0 +1,58 @@
+:root{
+    --color0: white;
+    --color1: rgb(141, 244, 141);
+    --color2: rgb(19, 214, 19);
+    --color3: rgb(2, 152, 2);
+    --color4: rgb(1, 95, 1);
+    --color5: rgb(4, 52, 4);
+    --solid-border: 1px solid black;
+    --dashed-border: 1px dashed black;
+}
+
+tr:nth-child(2) td{
+    border-top: 1px solid black;
+}
+
+tr:last-child td {
+    border-bottom: 1px solid black;
+}
+
+tr td:first-of-type {
+    border-left: 1px solid black;
+}
+
+tr td:last-of-type {
+    border-right: 1px solid black;
+}
+
+.available-0{
+    background-color: var(--color0);
+}
+
+.available-1{
+    background-color: var(--color1);
+}
+
+.available-2{
+    background-color: var(--color2);
+}
+
+.available-3{
+    background-color: var(--color3);
+}
+
+.available-4{
+    background-color: var(--color4);
+}
+
+.available-5{
+    background-color: var(--color5);
+}
+
+.sharp td{
+    border-bottom: var(--solid-border);
+}
+
+.half td{
+    border-bottom: var(--dashed-border);
+}
