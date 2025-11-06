@@ -1,5 +1,5 @@
 :root{
-    --color0: white;
+    --color0: rgb(199, 248, 199);
     --color1: rgb(141, 244, 141);
     --color2: rgb(19, 214, 19);
     --color3: rgb(2, 152, 2);
@@ -7,6 +7,10 @@
     --color5: rgb(4, 52, 4);
     --solid-border: 1px solid black;
     --dashed-border: 1px dashed black;
+}
+
+body{
+    background-color: rgb(160, 206, 181);
 }
 
 tr:nth-child(2) td{
@@ -55,4 +59,32 @@ tr td:last-of-type {
 
 .half td{
     border-bottom: var(--dashed-border);
+}
+
+#legend {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+#legend-gradient{
+    width: 200px;
+    height: 20px;
+    background-image: linear-gradient(
+        90deg, 
+        var(--color0) 0% 17%,
+        var(--color1) 17% 34%,
+        var(--color2) 34% 51%,
+        var(--color3) 51% 68%,
+        var(--color4) 68% 84%,
+        var(--color5) 84% 100%
+        );
 }
