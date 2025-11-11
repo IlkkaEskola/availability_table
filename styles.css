@@ -13,20 +13,46 @@ body{
     background-color: rgb(160, 206, 181);
 }
 
-tr:nth-child(2) td{
-    border-top: 1px solid black;
+.table-container {
+    overflow-x: auto;
+    max-width: 100%;
 }
 
-tr:last-child td {
-    border-bottom: 1px solid black;
+table{
+    margin: 30px auto;
+    border-collapse: collapse;
 }
 
-tr td:first-of-type {
-    border-left: 1px solid black;
+
+td, th {
+    width: 100px;
+    border: none;
 }
 
-tr td:last-of-type {
-    border-right: 1px solid black;
+tbody td:first-child,
+thead th:first-child {
+    border-left: var(--solid-border);
+}
+
+tbody td:last-child,
+thead th:last-child {
+    border-right: var(--solid-border);
+}
+
+tbody tr:last-child td {
+    border-bottom: var(--solid-border);
+}
+
+thead tr th {
+    border-top: var(--solid-border);
+}
+
+.half td {
+    border-bottom: var(--solid-border);
+}
+
+.sharp td {
+    border-bottom: var(--dashed-border);
 }
 
 .available-0{
@@ -63,16 +89,18 @@ tr td:last-of-type {
 
 #legend {
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
-#label{
+#label {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 1em;
+}
+
+#legend span{
+    margin-bottom: 5px;
 }
 
 #legend-gradient{
@@ -88,3 +116,4 @@ tr td:last-of-type {
         var(--color5) 84% 100%
         );
 }
+
